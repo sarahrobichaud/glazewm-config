@@ -38,6 +38,17 @@
 				weather: { type: "weather" },
 			});
 
+			const nameMap = {
+				"1": "Workspace⚙️",
+				"2": "Browsing🌐️",
+				"3": "Browsing 2🌐️",
+				"4": "Command Line👩‍💻",
+				"5": "Misc 1🔧",
+				"6": "Misc 2🔧",
+				"7": "Music️🎵",
+				"8": "Social📩",
+			};
+
 			createRoot(document.getElementById("root")).render(<App />);
 
 			function App() {
@@ -129,7 +140,7 @@
 											}
 											key={workspace.name}
 										>
-											{workspace.displayName ?? workspace.name}
+											{workspace.displayName ?? nameMap[workspace.name]}
 										</button>
 									))}
 								</div>
